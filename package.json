@@ -2,15 +2,14 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "devDependencies": {
-    "react-scripts": "1.1.4"
-  },
+  "devDependencies": {},
   "dependencies": {
     "jwt-decode": "^2.2.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.4",
     "react-router-dom": "^4.1.1",
+    "react-scripts-cssmodules": "^1.1.10",
     "redux": "^4.0.0",
     "redux-form": "^7.3.0",
     "redux-thunk": "^2.2.0"

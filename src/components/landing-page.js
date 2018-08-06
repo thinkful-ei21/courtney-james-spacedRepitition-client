@@ -1,26 +1,37 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {Link, Redirect} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
-import LoginForm from './login-form';
+import LoginPage from './login-page';
+import Button from './button';
+import emojiLogo from '../images/smileyEmoji.svg';
 
-export function LandingPage(props) {
-    // If we are logged in redirect straight to the user's dashboard
-    if (props.loggedIn) {
-        return <Redirect to="/dashboard" />;
-    }
+import styles from './styles/landing-page.module.css';
+
+
+export default function LandingPage(props) {
 
     return (
-        <div className="home">
-            <h2>Welcome to Foo App</h2>
-            <LoginForm />
-            <Link to="/register">Register</Link>
-        </div>
+      <div className={styles.parent}>
+        <section>
+          <img className={styles.logo}
+            src={emojiLogo}
+            alt="winking emoji"
+          />
+          <h1 className={styles.header}>
+            Learn Emoji in just a few minutes a day
+          </h1>
+
+          <Link to="/login">
+            <Button
+              label="Start Learning"
+              className="actionButton"
+            />
+          </Link>
+        </section>
+
+        <footer>
+          <p>Made by James & Courtney</p>
+        </footer>
+      </div>
     );
 }
-
-const mapStateToProps = state => ({
-    loggedIn: state.auth.currentUser !== null
-});
-
-export default connect(mapStateToProps)(LandingPage);
