@@ -5,7 +5,8 @@ import { login } from '../actions/auth';
 import Input from './input';
 import { required, nonEmpty, matches, length, isTrimmed } from '../validators';
 
-import styles from './styles/button.module.css';
+import buttonStyles from './styles/button.module.css';
+import formStyles from './styles/forms.module.css';
 
 const passwordLength = length({ min: 6, max: 72 }); // makes min password length 6 and max 72
 const matchesPassword = matches('password');
@@ -24,7 +25,7 @@ export class RegistrationForm extends React.Component {
     render() {
         return (
             <form
-                className="login-form"
+                className={formStyles.registerForm}
                 onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}
             >
                 <label htmlFor="username">Username</label>
@@ -48,7 +49,7 @@ export class RegistrationForm extends React.Component {
                     name="passwordConfirm"
                     validate={[required, nonEmpty, matchesPassword]}
                 />
-                <button className={styles.formButton}
+                <button className={buttonStyles.formButton}
                     type="submit"
                     disabled={this.props.pristine || this.props.submitting}
                 >

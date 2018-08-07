@@ -1,9 +1,8 @@
 .allContent {
   width: 40%;
-  border: 1px black solid;
   margin: 0 auto;
   margin-top: 20vh;
-
+  text-align: center;
 }
 
 .logo {
@@ -35,4 +34,9 @@
 .emojiForm input {
   display: block;
   margin: 0 auto;
+}
+
+.loginForm,
+.registerForm {
+  text-align: center;
 }
