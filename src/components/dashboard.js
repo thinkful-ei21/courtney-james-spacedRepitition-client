@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
-// import { fetchProtectedData } from '../actions/protected-data';
+import emoji from 'emoji-name-map';
 import { getQuestionData } from '../actions/questions';
 import HeaderBar from './header-bar';
 
@@ -13,16 +13,17 @@ export class Dashboard extends React.Component {
     }
 
     render() {
-      console.log(this.props.question);
+      console.log(this.props.question.emoji);
         return (
             <div className="dashboard">
               <HeaderBar />
+              {/* <p>{emoji.get(`${this.props.question.emoji}`)}</p> */}
+              <span role="img"
+                aria-label={this.props.question.emoji}
+              >
+                {emoji.get(`${this.props.question.emoji}`)}
+              </span>
 
-                {/* <div className="dashboard-username">Username: {this.props.username}</div> */}
-                {/* <div className="dashboard-name">Name: {this.props.name}</div> */}
-                {/* <div className="dashboard-protected-data">
-                    Protected data: {this.props.protectedData}
-                </div> */}
             </div>
         );
     }
@@ -33,7 +34,6 @@ const mapStateToProps = state => {
     return {
         username: state.auth.currentUser.username,
         question: state.question.question
-        // protectedData: state.protectedData.data
     };
 };
 
