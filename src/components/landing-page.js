@@ -11,7 +11,7 @@ import styles from './styles/landing-page.module.css';
 export default function LandingPage(props) {
 
     return (
-      <div className={styles.parent}>
+      <div>
         <section>
           <img className={styles.logo}
             src={emojiLogo}
@@ -21,10 +21,12 @@ export default function LandingPage(props) {
             Learn Emoji in just a few minutes a day
           </h1>
 
-          <Link to="/login">
+          <Link to="/login"
+            className={styles.buttonLink}
+          >
             <Button
               label="Start Learning"
-              className="actionButton"
+              className="startButton"
             />
           </Link>
         </section>

@@ -1,21 +1,26 @@
 section {
-  display: flex;
-  flex-direction: column;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 25vh;
 }
 
 .logo {
   width: 50px;
-  justify-content: center;
+  display: block;
+  margin: 0 auto;
 }
 
 .header {
   color: white;
   font-weight: 900;
   font-size: 2.5em;
-  width: 40%;
   text-align: center;
-  justify-content: center;
 }
+
+.buttonLink {
+  text-decoration: none;
+}
+
 
 footer {
   background-color: #108776;

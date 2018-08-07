@@ -7,3 +7,12 @@
   color: white;
   text-transform: uppercase;
 }
+
+.actionButton:hover {
+  cursor: pointer;
+}
+
+.startButton {
+  display: block;
+  margin: 0 auto;
+}
