@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import {Link, Redirect} from 'react-router-dom';
 
 import LoginForm from './login-form';
+import styles from './styles/forms.module.css';
+import emojiLogo from '../images/smileyEmoji.svg';
 
 
 export function LoginPage(props) {
@@ -12,10 +14,24 @@ export function LoginPage(props) {
   }
 
   return (
-    <div className="home">
-        <h2>Login</h2>
+    <div className={styles.allContent}>
+        <Link to="/"
+          className={styles.logoLink}
+        >
+          <img className={styles.logo}
+            src={emojiLogo}
+            alt="emoji logo"
+          />
+        </Link>
+        <h2 className={styles.header}>
+          Login
+        </h2>
         <LoginForm />
-        <Link to="/register">Register</Link>
+        <Link to="/register"
+          className={styles.linkToOtherForm}
+        >
+          Register
+        </Link>
     </div>
   );
 }

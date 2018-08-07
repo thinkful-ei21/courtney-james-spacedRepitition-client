@@ -3,6 +3,9 @@ import {connect} from 'react-redux';
 import {Link, Redirect} from 'react-router-dom';
 
 import RegistrationForm from './registration-form';
+import styles from './styles/forms.module.css';
+import emojiLogo from '../images/smileyEmoji.svg';
+
 
 export function RegistrationPage(props) {
     // If we are logged in (which happens automatically when registration
@@ -11,10 +14,24 @@ export function RegistrationPage(props) {
         return <Redirect to="/dashboard" />;
     }
     return (
-        <div className="home">
-            <h2>Register for Foo App</h2>
-            <RegistrationForm />
-            <Link to="/">Login</Link>
+        <div className={styles.allContent}>
+          <Link to="/"
+            className={styles.logoLink}
+          >
+            <img className={styles.logo}
+              src={emojiLogo}
+              alt="emoji logo"
+            />
+          </Link>
+          <h2 className={styles.header}>
+            Sign up
+          </h2>
+          <RegistrationForm />
+          <Link to="/login"
+            className={styles.linkToOtherForm}
+          >
+            Login
+          </Link>
         </div>
     );
 }

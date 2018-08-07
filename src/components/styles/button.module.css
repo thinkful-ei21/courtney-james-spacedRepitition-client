@@ -16,3 +16,15 @@
   display: block;
   margin: 0 auto;
 }
+
+.formButton {
+  background-color: #f53240;
+  border: none;
+  width: 90px;
+  height: 30px;
+  color: white;
+  text-transform: uppercase;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+}

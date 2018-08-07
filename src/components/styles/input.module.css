@@ -1,0 +1,10 @@
+.formInput {
+  margin: 0 auto;
+}
+
+.formInput input {
+  border-radius: 20px;
+  border: none;
+  height: 30px;
+  width: 225px;
+}

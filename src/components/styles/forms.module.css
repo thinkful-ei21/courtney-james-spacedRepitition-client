@@ -1,0 +1,30 @@
+.allContent {
+  width: 40%;
+  border: 1px black solid;
+  margin: 0 auto;
+  margin-top: 20vh;
+
+}
+
+.logo {
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+.logoLink {
+  text-decoration: none;
+}
+
+.header {
+  color: white;
+  font-weight: 900;
+  font-size: 2em;
+  text-align: center;
+}
+
+.linkToOtherForm {
+  text-align: center;
+  /* display: block;
+  margin: 0 auto; */
+}
