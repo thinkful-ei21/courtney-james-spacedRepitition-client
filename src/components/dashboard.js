@@ -5,6 +5,7 @@ import requiresLogin from './requires-login';
 import { getQuestionData } from '../actions/questions';
 import HeaderBar from './header-bar';
 import Card from './emoji-card';
+import Quiz from './emoji-form';
 
 
 
@@ -22,17 +23,14 @@ export class Dashboard extends React.Component {
                 description={this.props.question.description}
                 emoji={this.props.question.emoji}
               />
-              {/* <span role="img"
-                aria-label={this.props.question.emoji}
-              >
-                {emoji.get(`${this.props.question.emoji}`)}
-              </span> */}
 
-              <form>
+              <Quiz />
+
+              {/* <form>
                 <label htmlFor="description">Your Answer:</label>
                 <input id="description" type="text"></input>
                 <button>Submit</button>
-              </form>
+              </form> */}
 
             </div>
         );

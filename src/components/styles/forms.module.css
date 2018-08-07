@@ -25,6 +25,14 @@
 
 .linkToOtherForm {
   text-align: center;
-  /* display: block;
-  margin: 0 auto; */
+}
+
+.emojiForm {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.emojiForm input {
+  display: block;
+  margin: 0 auto;
 }
