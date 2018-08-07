@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import LoginPage from './login-page';
 import Button from './button';
 import emojiLogo from '../images/smileyEmoji.svg';
 

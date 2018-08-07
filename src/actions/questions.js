@@ -1,6 +1,5 @@
 import { API_BASE_URL } from '../config';
 import { normalizeResponseErrors } from './utils';
-import { SubmissionError } from 'redux-form';
 
 
 export const FETCH_QUESTION_REQUEST = 'FETCH_QUESTION_REQUEST';

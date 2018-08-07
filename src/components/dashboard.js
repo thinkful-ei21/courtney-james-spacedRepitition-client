@@ -15,7 +15,6 @@ export class Dashboard extends React.Component {
     }
 
     render() {
-      console.log(this.props.question.emoji);
         return (
             <div className="dashboard">
               <HeaderBar />
@@ -32,7 +31,6 @@ export class Dashboard extends React.Component {
 }
 
 const mapStateToProps = state => {
-    const { currentUser } = state.auth;
     return {
         username: state.auth.currentUser.username,
         question: state.question.question
