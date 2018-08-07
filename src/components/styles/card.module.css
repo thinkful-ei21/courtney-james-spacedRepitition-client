@@ -1,0 +1,14 @@
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  height: 250px;
+  border-radius: 25px;
+  background-color: white;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 45px;
+}
+
+.emoji {
+  font-size: 800%;
+}
