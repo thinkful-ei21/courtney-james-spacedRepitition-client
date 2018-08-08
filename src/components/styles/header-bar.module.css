@@ -1,0 +1,22 @@
+.headerBar h1 {
+  font-size: 2em;
+  color: #108776;
+  padding-left: 25px;
+}
+
+.headerBar button {
+  float: right;
+  position: relative;
+  top: -55px;
+  margin-right: 25px;
+  background-color: transparent;
+  border: 2px solid #108776;
+  border-radius: 25px;
+  width: 100px;
+  height: 30px;
+  color: #108776;
+}
+
+.headerBar button:hover {
+  cursor: pointer;
+}
