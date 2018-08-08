@@ -30,8 +30,9 @@ export const validateUserInputSuccess = feedback => ({
 });
 
 export const VALIDATE_USER_INPUT_ERROR = 'VALIDATE_USER_INPUT_ERROR';
-export const validateUserInputError = () => ({
-    type: VALIDATE_USER_INPUT_ERROR
+export const validateUserInputError = error => ({
+    type: VALIDATE_USER_INPUT_ERROR,
+    error
 });
 
 export const getQuestionData = () => (dispatch, getState) => {

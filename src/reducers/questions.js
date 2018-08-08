@@ -3,7 +3,8 @@ import {
   FETCH_QUESTION_SUCCESS,
   FETCH_QUESTION_ERROR,
   VALIDATE_USER_INPUT_REQUEST,
-  VALIDATE_USER_INPUT_SUCCESS
+  VALIDATE_USER_INPUT_SUCCESS,
+  VALIDATE_USER_INPUT_ERROR
 } from '../actions/questions';
 
 
@@ -51,6 +52,14 @@ const fetchQuestion = (state = initialState, action) => {
           ...state,
           loading: false,
           feedback: action.feedback
+      })
+  }
+
+  else if (action.type === VALIDATE_USER_INPUT_ERROR) {
+      return ({
+          ...state,
+          loading: false,
+          error: action.error
       })
   }
 
