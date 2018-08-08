@@ -24,8 +24,9 @@ export const validateUserInputRequest = () => ({
 });
 
 export const VALIDATE_USER_INPUT_SUCCESS = 'VALIDATE_USER_INPUT_SUCCESS';
-export const validateUserInputSuccess = () => ({
-    type: VALIDATE_USER_INPUT_SUCCESS
+export const validateUserInputSuccess = feedback => ({
+    type: VALIDATE_USER_INPUT_SUCCESS,
+    feedback
 });
 
 export const VALIDATE_USER_INPUT_ERROR = 'VALIDATE_USER_INPUT_ERROR';
