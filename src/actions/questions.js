@@ -18,6 +18,21 @@ export const fetchQuestionError = error => ({
     error
 });
 
+export const VALIDATE_USER_INPUT_REQUEST = 'VALIDATE_USER_INPUT_REQUEST';
+export const validateUserInputRequest = () => ({
+    type: VALIDATE_USER_INPUT_REQUEST
+});
+
+export const VALIDATE_USER_INPUT_SUCCESS = 'VALIDATE_USER_INPUT_SUCCESS';
+export const validateUserInputSuccess = () => ({
+    type: VALIDATE_USER_INPUT_SUCCESS
+});
+
+export const VALIDATE_USER_INPUT_ERROR = 'VALIDATE_USER_INPUT_ERROR';
+export const validateUserInputError = () => ({
+    type: VALIDATE_USER_INPUT_ERROR
+});
+
 export const getQuestionData = () => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
 
@@ -34,10 +49,10 @@ export const getQuestionData = () => (dispatch, getState) => {
         .catch(err => dispatch(fetchQuestionError(err)));
 };
 
-export const getNextQuestion = () => (dispatch, getState) => {
+export const validateUserInput = userInput => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
 
-    dispatch(fetchQuestionRequest());
+    dispatch(validateUserInputRequest());
     return fetch(`${API_BASE_URL}/questions`, {
         method: 'POST',
         headers: {
@@ -46,6 +61,6 @@ export const getNextQuestion = () => (dispatch, getState) => {
     })
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
-        .then(data => dispatch(fetchQuestionSuccess(data)))
-        .catch(err => dispatch(fetchQuestionError(err)));
+        .then(data => dispatch(validateUserInputSuccess(data)))
+        .catch(err => dispatch(validateUserInputError(err)));
 };
