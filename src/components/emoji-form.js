@@ -8,7 +8,7 @@ export default class Quiz extends React.Component {
         event.preventDefault();
 
         // grabs the value of the input element after you submit the form
-        userAnswer = event.target.answer.value;
+        const userAnswer = event.target.answer.value;
         console.log(userAnswer);
     }
 
