@@ -64,5 +64,6 @@ export const validateUserInput = userInput => (dispatch, getState) => {
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
         .then(data => dispatch(validateUserInputSuccess(data)))
+        .then(dispatch => dispatch(getQuestionData()))
         .catch(err => dispatch(validateUserInputError(err)));
 };
