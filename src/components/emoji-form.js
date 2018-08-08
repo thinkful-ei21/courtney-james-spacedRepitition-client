@@ -1,15 +1,17 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import buttonStyles from './styles/button.module.css';
 import inputStyles from './styles/input.module.css';
 import formStyles from './styles/forms.module.css';
+import { validateUserInput } from '../actions/questions';
 
-export default class Quiz extends React.Component {
+export class Quiz extends React.Component {
     onSubmit(event) {
         event.preventDefault();
 
         // grabs the value of the input element after you submit the form
-        const userAnswer = event.target.answer.value;
-        console.log(userAnswer);
+        const userInput = event.target.answer.value;
+        this.props.dispatch(validateUserInput(userInput));
     }
 
     render() {
@@ -25,3 +27,9 @@ export default class Quiz extends React.Component {
         );
     }
 }
+
+const mapStatToProps = state => {
+    return {};
+};
+
+export default connect(mapStatToProps)(Quiz);
