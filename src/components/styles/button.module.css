@@ -8,7 +8,9 @@
   text-transform: uppercase;
 }
 
-.actionButton:hover {
+.actionButton:hover,
+.startButton:hover,
+.formButton:hover {
   cursor: pointer;
 }
 
