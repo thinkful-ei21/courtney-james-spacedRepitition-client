@@ -26,7 +26,8 @@ const fetchQuestion = (state = initialState, action) => {
         return {
             ...state,
             loading: false,
-            question: action.question.question
+            question: action.question.question,
+            answer: action.question.description
         };
     } else if (action.type === FETCH_QUESTION_ERROR) {
         return {
