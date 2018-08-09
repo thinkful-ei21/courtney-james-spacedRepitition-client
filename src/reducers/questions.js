@@ -10,6 +10,7 @@ import {
 const initialState = {
     question: {},
     feedback: '',
+    answer: '',
     error: null,
     loading: false
 };
@@ -25,7 +26,7 @@ const fetchQuestion = (state = initialState, action) => {
         return {
             ...state,
             loading: false,
-            question: action.question
+            question: action.question.question
         };
     } else if (action.type === FETCH_QUESTION_ERROR) {
         return {
