@@ -29,7 +29,9 @@ export class Quiz extends React.Component {
 }
 
 const mapStatToProps = state => {
-    return {};
+    return {
+        feedback: state.question.feedback
+    };
 };
 
 export default connect(mapStatToProps)(Quiz);
