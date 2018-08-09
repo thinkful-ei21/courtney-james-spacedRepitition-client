@@ -16,14 +16,17 @@ export class Quiz extends React.Component {
 
     render() {
         return (
-            <form
-                className={`${inputStyles.formInput} ${formStyles.emojiForm}`}
-                onSubmit={event => this.onSubmit(event)}
-            >
-                <label htmlFor="description">Your Answer:</label>
-                <input id="description" type="text" name="answer" />
-                <button className={buttonStyles.formButton}>Submit</button>
-            </form>
+            <div>
+                <form
+                    className={`${inputStyles.formInput} ${formStyles.emojiForm}`}
+                    onSubmit={event => this.onSubmit(event)}
+                >
+                    <label htmlFor="description">Your Answer:</label>
+                    <input id="description" type="text" name="answer" />
+                    <button className={buttonStyles.formButton}>Submit</button>
+                </form>
+                <p className={`${inputStyles.formInput}`}>{this.props.feedback}</p>
+            </div>
         );
     }
 }

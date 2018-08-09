@@ -7,8 +7,6 @@ import HeaderBar from './header-bar';
 import Card from './emoji-card';
 import Quiz from './emoji-form';
 
-
-
 export class Dashboard extends React.Component {
     componentDidMount() {
         this.props.dispatch(getQuestionData());
@@ -17,14 +15,14 @@ export class Dashboard extends React.Component {
     render() {
         return (
             <div className="dashboard">
-              <HeaderBar />
+                <HeaderBar />
 
-              <Card
-                description={this.props.question.description}
-                emoji={this.props.question.emoji}
-              />
+                <Card
+                    description={this.props.question.description}
+                    emoji={this.props.question.emoji}
+                />
 
-              <Quiz />
+                <Quiz />
             </div>
         );
     }

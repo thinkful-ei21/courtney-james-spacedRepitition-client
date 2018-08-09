@@ -9,7 +9,7 @@ import {
 
 const initialState = {
     question: {},
-    feedback: 'correct',
+    feedback: '',
     error: null,
     loading: false
 };
