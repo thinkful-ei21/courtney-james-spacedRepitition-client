@@ -55,7 +55,6 @@ export const validateUserInput = userInput => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
 
     dispatch(validateUserInputRequest());
-    console.log(JSON.stringify({ answer: userInput }));
 
     return fetch(`${API_BASE_URL}/questions`, {
         method: 'POST',
@@ -69,10 +68,7 @@ export const validateUserInput = userInput => (dispatch, getState) => {
     })
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
-        .then(data => {
-            console.log(data); // => { emoji, description }
-            dispatch(validateUserInputSuccess(data));
-        })
+        .then(data => dispatch(validateUserInputSuccess(data)))
         .then(dispatch => dispatch(getQuestionData()))
         .catch(err => dispatch(validateUserInputError(err)));
 };
