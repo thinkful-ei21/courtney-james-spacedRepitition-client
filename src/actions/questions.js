@@ -55,11 +55,17 @@ export const validateUserInput = userInput => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
 
     dispatch(validateUserInputRequest());
+    console.log(JSON.stringify({ answer: userInput }));
+
     return fetch(`${API_BASE_URL}/questions`, {
         method: 'POST',
         headers: {
+            'content-type': 'application/json',
             Authorization: `Bearer ${authToken}`
-        }
+        },
+        body: JSON.stringify({
+            answer: userInput
+        })
     })
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
