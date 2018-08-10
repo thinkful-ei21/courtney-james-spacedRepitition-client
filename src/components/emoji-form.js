@@ -12,6 +12,7 @@ export class Quiz extends React.Component {
         // grabs the value of the input element after you submit the form
         const userInput = event.target.answer.value;
         this.props.dispatch(validateUserInput(userInput));
+        event.target.reset();
     }
 
     nextButton() {
@@ -23,6 +24,7 @@ export class Quiz extends React.Component {
     }
 
     render() {
+        const streak = this.props.streak;
         return (
             <div>
                 <form
@@ -39,6 +41,9 @@ export class Quiz extends React.Component {
                 >
                     Next
                 </button>
+                <p className={inputStyles.formInput}>
+                    You've gotten {streak} questions correct so far
+                </p>
                 {/* <p className={`${inputStyles.formInput}`}>{this.props.feedback}</p> */}
             </div>
         );
@@ -49,6 +54,7 @@ const mapStatToProps = state => {
     return {
         // feedback: state.question.feedback,
         // answer: state.question.question.description
+        streak: state.question.correct
     };
 };
 

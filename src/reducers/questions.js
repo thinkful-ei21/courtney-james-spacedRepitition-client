@@ -11,6 +11,7 @@ const initialState = {
     question: {},
     feedback: '',
     answer: '',
+    correct: 0,
     userAnswered: false,
     error: null,
     loading: false
@@ -44,12 +45,22 @@ const fetchQuestion = (state = initialState, action) => {
             error: null
         };
     } else if (action.type === VALIDATE_USER_INPUT_SUCCESS) {
-        return {
-            ...state,
-            loading: false,
-            feedback: action.feedback,
-            userAnswered: true
-        };
+        if (action.feedback === 'Correct') {
+            return {
+                ...state,
+                loading: false,
+                feedback: action.feedback,
+                userAnswered: true,
+                correct: state.correct + 1
+            };
+        } else {
+            return {
+                ...state,
+                loading: false,
+                feedback: action.feedback,
+                userAnswered: true
+            };
+        }
     } else if (action.type === VALIDATE_USER_INPUT_ERROR) {
         return {
             ...state,
