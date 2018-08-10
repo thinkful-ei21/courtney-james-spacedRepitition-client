@@ -1,5 +1,5 @@
 .allContent {
-  width: 40%;
+  /* width: 40%; */
   margin: 0 auto;
   margin-top: 20vh;
   text-align: center;
@@ -24,7 +24,6 @@
 
 .linkToOtherForm {
   text-align: center;
-  /* margin-top: 15px; */
 }
 
 .emojiForm {
@@ -40,4 +39,17 @@
 .loginForm,
 .registerForm {
   text-align: center;
+}
+
+
+@media only screen (max-width: 600px) {
+  .allContent {
+    width: 80%;
+  }
+}
+
+@media only screen (min-width: 601px) {
+  .allContent {
+    width: 40%;
+  }
 }
