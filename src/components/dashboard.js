@@ -35,7 +35,9 @@ export class Dashboard extends React.Component {
                     userAnswered={this.props.userAnswered}
                 />
 
-                <Quiz />
+                <Quiz
+                    userAnswered={this.props.userAnswered}
+                />
             </div>
         );
     }
