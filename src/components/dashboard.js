@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
 import { getQuestionData } from '../actions/questions';
 
-import inputStyles from './styles/input.module.css';
+import styles from './styles/dashboard.module.css';
 
 import HeaderBar from './header-bar';
 import Card from './emoji-card';
@@ -16,13 +16,19 @@ export class Dashboard extends React.Component {
 
     render() {
         const feedbackTag = (
-            <p className={`${inputStyles.formInput}`}>{this.props.feedback}</p>
+            <p className={styles.feedback}>
+              {this.props.feedback}
+            </p>
         );
+
         return (
-            <div className="dashboard">
+            <div>
                 <HeaderBar />
 
-                {this.props.userAnswered ? feedbackTag : ''}
+                <div className={styles.dashboardFeedback}>
+                  {this.props.userAnswered ? feedbackTag : ''}
+                </div>
+
                 <Card
                     description={this.props.question.description}
                     emoji={this.props.question.emoji}

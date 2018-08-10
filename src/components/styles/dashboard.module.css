@@ -1,0 +1,14 @@
+.dashboardFeedback {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  /* border: 1px black solid; */
+  padding: 0;
+}
+
+.feedback {
+  color: white;
+  font-weight: 900;
+  font-size: 1.5em;
+  /* border: 1px black solid; */
+}

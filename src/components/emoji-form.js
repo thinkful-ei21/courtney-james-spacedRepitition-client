@@ -11,6 +11,8 @@ export class Quiz extends React.Component {
 
         // grabs the value of the input element after you submit the form
         const userInput = event.target.answer.value;
+        event.target.reset();
+        
         this.props.dispatch(validateUserInput(userInput));
     }
 
