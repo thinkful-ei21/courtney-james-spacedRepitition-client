@@ -15,8 +15,7 @@ export class Quiz extends React.Component {
     }
 
     componentDidUpdate() {
-        console.log(this.props);
-        // this.props.dispatch(getQuestionData());
+        this.props.dispatch(getQuestionData());
     }
 
     render() {
@@ -29,6 +28,7 @@ export class Quiz extends React.Component {
                     <label htmlFor="description">Your Answer:</label>
                     <input id="description" type="text" name="answer" />
                     <button className={buttonStyles.formButton}>Submit</button>
+                    <button className={buttonStyles.formButton}>Next</button>
                 </form>
                 <p className={`${inputStyles.formInput}`}>{this.props.feedback}</p>
             </div>

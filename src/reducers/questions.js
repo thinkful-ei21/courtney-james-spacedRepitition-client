@@ -16,7 +16,6 @@ const initialState = {
 };
 
 const fetchQuestion = (state = initialState, action) => {
-    console.log(action);
     if (action.type === FETCH_QUESTION_REQUEST) {
         return {
             ...state,

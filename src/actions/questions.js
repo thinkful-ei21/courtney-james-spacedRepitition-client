@@ -59,24 +59,22 @@ export const validateUserInput = userInput => (dispatch, getState) => {
 
     dispatch(validateUserInputRequest());
 
-    return (
-        fetch(`${API_BASE_URL}/questions`, {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json',
-                Authorization: `Bearer ${authToken}`
-            },
-            body: JSON.stringify({
-                answer: userInput
-            })
+    return fetch(`${API_BASE_URL}/questions`, {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json',
+            Authorization: `Bearer ${authToken}`
+        },
+        body: JSON.stringify({
+            answer: userInput
         })
-            .then(res => normalizeResponseErrors(res))
-            .then(res => res.json())
-            .then(data => {
-                const feedback = data.msg;
-                dispatch(validateUserInputSuccess(feedback));
-            })
-            // .then(dispatch => dispatch(getQuestionData()))
-            .catch(err => dispatch(validateUserInputError(err)))
-    );
+    })
+        .then(res => normalizeResponseErrors(res))
+        .then(res => res.json())
+        .then(data => {
+            const feedback = data.msg;
+            dispatch(validateUserInputSuccess(feedback));
+        })
+        .then(dispatch => dispatch(getQuestionData()))
+        .catch(err => dispatch(validateUserInputError(err)));
 };
