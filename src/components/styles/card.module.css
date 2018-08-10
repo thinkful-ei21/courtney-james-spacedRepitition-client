@@ -12,4 +12,10 @@
 
 .emoji {
   font-size: 800%;
+  margin-top: -7px;
+}
+
+.description {
+  text-transform: capitalize;
+  margin-top: -5px;
 }
