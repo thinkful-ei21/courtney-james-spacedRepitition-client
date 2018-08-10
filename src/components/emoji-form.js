@@ -48,30 +48,12 @@ export class Quiz extends React.Component {
             <div>
                 <form
                     className={`${inputStyles.formInput} ${formStyles.emojiForm}`}
-                    // onSubmit={event => this.onSubmit(event)}
                 >
-                    {/* <label htmlFor="answer">Your Answer:</label>
-                    <input id="answer" type="text" name="answer" /> */}
                     {form}
-                    {/* <button className={buttonStyles.formButton}>Submit</button> */}
                 </form>
-                {/* <button
-                    className={buttonStyles.formButton}
-                    onClick={() => this.nextButton()}
-                >
-                    Next
-                </button> */}
-                {/* <p className={`${inputStyles.formInput}`}>{this.props.feedback}</p> */}
             </div>
         );
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        // feedback: state.question.feedback,
-        // answer: state.question.question.description
-    };
-};
-
-export default connect(mapStateToProps)(Quiz);
+export default connect()(Quiz);
