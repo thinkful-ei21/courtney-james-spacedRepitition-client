@@ -16,28 +16,34 @@ export class Dashboard extends React.Component {
 
     render() {
         const feedbackTag = (
-            <p className={styles.feedback}>
+            <p className={styles.feedback}
+              aria-live="polite"
+            >
               {this.props.feedback}
             </p>
         );
 
         return (
             <div>
-                <HeaderBar />
+                <HeaderBar aria-label="navigation"/>
 
                 <div className={styles.dashboardFeedback}>
                   {this.props.userAnswered ? feedbackTag : ''}
                 </div>
 
-                <Card
-                    description={this.props.question.description}
-                    emoji={this.props.question.emoji}
-                    userAnswered={this.props.userAnswered}
-                />
+                <div aria-live="polite">
+                  <Card
+                      description={this.props.question.description}
+                      emoji={this.props.question.emoji}
+                      userAnswered={this.props.userAnswered}
+                      aria-label="emoji card"
+                  />
 
-                <Quiz
-                    userAnswered={this.props.userAnswered}
-                />
+                  <Quiz
+                      userAnswered={this.props.userAnswered}
+                      aria-label="quiz form"
+                  />
+                </div>
             </div>
         );
     }

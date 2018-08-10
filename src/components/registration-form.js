@@ -34,6 +34,7 @@ export class RegistrationForm extends React.Component {
                     type="text"
                     name="username"
                     validate={[required, nonEmpty, isTrimmed]}
+                    aria-required="true"
                 />
                 <label htmlFor="password">Password</label>
                 <Field
@@ -41,6 +42,7 @@ export class RegistrationForm extends React.Component {
                     type="password"
                     name="password"
                     validate={[required, passwordLength, isTrimmed]}
+                    aria-required="true"
                 />
                 <label htmlFor="passwordConfirm">Confirm password</label>
                 <Field
@@ -48,6 +50,7 @@ export class RegistrationForm extends React.Component {
                     type="password"
                     name="passwordConfirm"
                     validate={[required, nonEmpty, matchesPassword]}
+                    aria-required="true"
                 />
                 <button className={buttonStyles.formButton}
                     type="submit"

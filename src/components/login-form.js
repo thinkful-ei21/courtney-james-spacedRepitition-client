@@ -36,6 +36,7 @@ export class LoginForm extends React.Component {
                     name="username"
                     id="username"
                     validate={[required, nonEmpty]}
+                    aria-required="true"
                 />
                 <label htmlFor="password">Password</label>
                 <Field
@@ -44,6 +45,7 @@ export class LoginForm extends React.Component {
                     name="password"
                     id="password"
                     validate={[required, nonEmpty]}
+                    aria-required="true"
                 />
                 <button className={buttonStyles.formButton}
                   disabled={this.props.pristine || this.props.submitting}
