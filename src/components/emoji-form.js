@@ -23,7 +23,7 @@ export class Quiz extends React.Component {
 
 
     render() {
-        const button = (
+        const form = (
           this.props.userAnswered ?
             <button
                 className={buttonStyles.formButton}
@@ -32,12 +32,16 @@ export class Quiz extends React.Component {
                 Next
             </button>
             :
-            <button
-              className={buttonStyles.formButton}
-              onClick={event => this.onSubmit(event)}
-            >
-              Submit
-            </button>
+            <React.Fragment>
+              <label htmlFor="answer">Your Answer:</label>
+              <input id="answer" type="text" name="answer" />
+              <button
+                className={buttonStyles.formButton}
+                onClick={event => this.onSubmit(event)}
+              >
+                Submit
+              </button>
+            </React.Fragment>
         );
 
         return (
@@ -46,9 +50,9 @@ export class Quiz extends React.Component {
                     className={`${inputStyles.formInput} ${formStyles.emojiForm}`}
                     // onSubmit={event => this.onSubmit(event)}
                 >
-                    <label htmlFor="answer">Your Answer:</label>
-                    <input id="answer" type="text" name="answer" />
-                    {button}
+                    {/* <label htmlFor="answer">Your Answer:</label>
+                    <input id="answer" type="text" name="answer" /> */}
+                    {form}
                     {/* <button className={buttonStyles.formButton}>Submit</button> */}
                 </form>
                 {/* <button
