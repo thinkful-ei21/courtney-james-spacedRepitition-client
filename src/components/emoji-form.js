@@ -14,8 +14,12 @@ export class Quiz extends React.Component {
         this.props.dispatch(validateUserInput(userInput));
     }
 
-    componentDidUpdate() {
+    nextButton() {
         this.props.dispatch(getQuestionData());
+    }
+
+    componentDidUpdate() {
+        // this.props.dispatch(getQuestionData());
     }
 
     render() {
@@ -28,9 +32,14 @@ export class Quiz extends React.Component {
                     <label htmlFor="description">Your Answer:</label>
                     <input id="description" type="text" name="answer" />
                     <button className={buttonStyles.formButton}>Submit</button>
-                    <button className={buttonStyles.formButton}>Next</button>
                 </form>
-                <p className={`${inputStyles.formInput}`}>{this.props.feedback}</p>
+                <button
+                    className={buttonStyles.formButton}
+                    onClick={() => this.nextButton()}
+                >
+                    Next
+                </button>
+                {/* <p className={`${inputStyles.formInput}`}>{this.props.feedback}</p> */}
             </div>
         );
     }
@@ -38,8 +47,8 @@ export class Quiz extends React.Component {
 
 const mapStatToProps = state => {
     return {
-        feedback: state.question.feedback,
-        answer: state.question.question.description
+        // feedback: state.question.feedback,
+        // answer: state.question.question.description
     };
 };
 

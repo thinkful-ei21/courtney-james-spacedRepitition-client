@@ -11,6 +11,7 @@ const initialState = {
     question: {},
     feedback: '',
     answer: '',
+    userAnswered: false,
     error: null,
     loading: false
 };
@@ -20,7 +21,8 @@ const fetchQuestion = (state = initialState, action) => {
         return {
             ...state,
             loading: true,
-            error: null
+            error: null,
+            userAnswered: false
         };
     } else if (action.type === FETCH_QUESTION_SUCCESS) {
         return {
@@ -45,7 +47,8 @@ const fetchQuestion = (state = initialState, action) => {
         return {
             ...state,
             loading: false,
-            feedback: action.feedback
+            feedback: action.feedback,
+            userAnswered: true
         };
     } else if (action.type === VALIDATE_USER_INPUT_ERROR) {
         return {
