@@ -32,7 +32,7 @@ Can't find the right words to say? Use Emojis instead! This app improves your em
 
 * [Create React App](https://github.com/facebookincubator/create-react-app) - Front end React app
 * [Front end](https://github.com/Thinkful-Ed/react-jwt-auth) - Front end template provided by Thinkful
-* [Back end](https://github.com/Thinkful-Ed/backend-template) - Front end template provided by Thinkful
+* [Back end](https://github.com/Thinkful-Ed/backend-template) - Back end template provided by Thinkful
 * [Emoji-name-map](https://www.npmjs.com/package/emoji-name-map) - Used to convert unicode to emojis
 
 
