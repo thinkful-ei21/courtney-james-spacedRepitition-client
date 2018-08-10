@@ -10,8 +10,10 @@ export class Quiz extends React.Component {
         event.preventDefault();
 
         // grabs the value of the input element after you submit the form
-        const userInput = document.getElementById("answer").value;
-        document.getElementById("answer").value = '';
+        const userInput = document.getElementById('answer').value;
+
+        // vanilla JS way of resetting value of the input
+        document.getElementById('answer').value = '';
 
         this.props.dispatch(validateUserInput(userInput));
     }
@@ -21,34 +23,30 @@ export class Quiz extends React.Component {
         this.props.dispatch(getQuestionData());
     }
 
-
     render() {
-        const form = (
-          this.props.userAnswered ?
+        const form = this.props.userAnswered ? (
             <button
                 className={buttonStyles.formButton}
                 onClick={event => this.nextButton(event)}
             >
                 Next
             </button>
-            :
+        ) : (
             <React.Fragment>
-              <label htmlFor="answer">Your Answer:</label>
-              <input id="answer" type="text" name="answer" />
-              <button
-                className={buttonStyles.formButton}
-                onClick={event => this.onSubmit(event)}
-              >
-                Submit
-              </button>
+                <label htmlFor="answer">Your Answer:</label>
+                <input id="answer" type="text" name="answer" />
+                <button
+                    className={buttonStyles.formButton}
+                    onClick={event => this.onSubmit(event)}
+                >
+                    Submit
+                </button>
             </React.Fragment>
         );
 
         return (
             <div>
-                <form
-                    className={`${inputStyles.formInput} ${formStyles.emojiForm}`}
-                >
+                <form className={`${inputStyles.formInput} ${formStyles.emojiForm}`}>
                     {form}
                 </form>
             </div>
