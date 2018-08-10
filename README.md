@@ -25,7 +25,7 @@ Can't find the right words to say? Use Emojis instead! This app improves your em
   * JSON Web Token
   * Passport
 
-[See Back end code](https://github.com/thinkful-ei21/courtney-james-spacedRepetition-server/graphs/contributors)
+[See Back end code](https://github.com/thinkful-ei21/courtney-james-spacedRepetition-server)
 
 
 ## Built With
