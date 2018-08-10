@@ -11,7 +11,7 @@ export default function LandingPage(props) {
 
     return (
       <div>
-        <section>
+        <section className={styles.allContent}>
           <img className={styles.logo}
             src={emojiLogo}
             alt="winking emoji"
