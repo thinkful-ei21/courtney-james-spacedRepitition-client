@@ -57,7 +57,9 @@
   height: 100vh;
 }
 
-.leftCloudBackground {
+.leftCloudBackground,
+.rightCloudBackground {
+  height: 100vh;
   display: flex;
   box-sizing: border-box;
 }
@@ -83,22 +85,19 @@
 .h4 {
   font-size: 1.5em;
   margin: 0;
-
 }
 
 .demoPage {
   height: 100vh;
   display: flex;
-}
-
-.demoHeader {
-  margin-top: -20%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .demoHeader,
 .demoAccount {
   text-align: center;
-  margin-bottom: 10%;
 }
 
 .demoLabel {
@@ -163,18 +162,18 @@
     margin-top: 15%;
   }
 
-  .demoPage {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .demoHeader {
+    margin-top: -20vw;
+    width: 90vw;
   }
 
-  .demoHeader {
-    width: 90%;
+  .demoHeader,
+  .demoAccount {
+    margin-bottom: 10vh;
   }
 
   .demoAccount {
-    width: 60%;
+    width: 60vw;
   }
 }
 
@@ -189,8 +188,41 @@
     height: 150px;
   }
 
-  .leftCloudBackground {
+  .leftCloudBackground,
+  .rightCloudBackground {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rightCloudBackground {
+    flex-direction: row-reverse;
+  }
+
+  .feedback,
+  .algo {
+    width: 40vw;
+  }
+
+  .demoHeader {
+    width: 60vw;
+  }
+
+  .demoHeader,
+  .demoAccount {
+    margin-bottom: 5vh;
+  }
+
+  .demoAccount {
+    width: 40vw;
+  }
+
+  .demoValue {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .demoLeftCloud {
+    top: 0;
   }
 }
