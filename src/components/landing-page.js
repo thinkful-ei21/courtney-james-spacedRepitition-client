@@ -12,7 +12,7 @@ export default function LandingPage(props) {
     return (
       <div className={styles.allContent}>
         <section className={styles.landing}>
-          <img className={styles.leftCloud}
+          <img className={styles.landingLeftCloud}
             src={require('../images/leftCloud.svg')}
             alt="cloud illustration"
           />
@@ -34,7 +34,7 @@ export default function LandingPage(props) {
               />
             </Link>
           </div>
-          <img className={styles.rightCloud}
+          <img className={styles.landingRightCloud}
             src={require('../images/rightCloud.svg')}
             alt="cloud illustration"
           />
@@ -71,6 +71,11 @@ export default function LandingPage(props) {
         </section>
 
         <section className={styles.demoPage}>
+          <img className={styles.demoLeftCloud}
+            src={require('../images/leftCloud.svg')}
+            alt="cloud illustration"
+          />
+
           <div className={styles.demoHeader}>
             <h3 className={styles.h3}>
               Want to try it out?
@@ -96,6 +101,10 @@ export default function LandingPage(props) {
             />
           </Link>
 
+          <img className={styles.demoRightCloud}
+            src={require('../images/rightCloud.svg')}
+            alt="cloud illustration"
+          />
         </section>
 
         <footer className={styles.footer}>

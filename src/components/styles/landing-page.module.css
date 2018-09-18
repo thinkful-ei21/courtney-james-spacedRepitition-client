@@ -1,5 +1,6 @@
 .landing,
-.allContent {
+.allContent,
+.demoPage {
   position: relative;
 }
 
@@ -12,21 +13,29 @@
   align-items: center;
 }
 
-.leftCloud,
-.rightCloud {
+.landingLeftCloud,
+.landingRightCloud,
+.demoLeftCloud,
+.demoRightCloud {
   position: absolute;
   width: 200px;
   height: 100px;
 }
 
-.leftCloud {
+.landingLeftCloud {
   top: 5%;
   left: 0;
 }
 
-.rightCloud {
+.landingRightCloud,
+.demoRightCloud {
   bottom: 5%;
   right: 0;
+}
+
+.demoLeftCloud {
+  top: -5%;
+  left: 0;
 }
 
 .logo {
