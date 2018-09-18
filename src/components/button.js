@@ -5,7 +5,7 @@ export default function Button(props) {
   const className = props.className;
 
   return (
-    <button className={[styles[className], styles.actionButton].join(' ')}>
+    <button className={`${styles[className]} ${styles.actionButton}`}>
       {props.label}
     </button>
   );

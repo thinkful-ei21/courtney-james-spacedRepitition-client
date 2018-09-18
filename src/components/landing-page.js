@@ -30,7 +30,7 @@ export default function LandingPage(props) {
             >
               <Button
                 label="Start Learning"
-                className="startButton"
+                className="startLandingPage"
               />
             </Link>
           </div>
@@ -42,7 +42,7 @@ export default function LandingPage(props) {
 
         <section className={styles.featurePage}>
           <div className={styles.leftCloudBackground}>
-            <div className={styles.mobileImgBkgrd}>
+            <div className={styles.mobileFeatureImgBkgrd}>
               <img className={styles.feedback}
                 src={require('../images/feedback.svg')}
                 alt="emoji card feedback"
@@ -57,7 +57,7 @@ export default function LandingPage(props) {
 
         <section className={styles.featurePage}>
           <div className={styles.rightCloudBackground}>
-            <div className={styles.mobileImgBkgrd}>
+            <div className={styles.mobileFeatureImgBkgrd}>
               <img className={styles.algo}
                 src={require('../images/algo.svg')}
                 alt="shows how algorithm works when user gets question correct and incorrect"
@@ -68,6 +68,34 @@ export default function LandingPage(props) {
               to get tested more on what you don't know.
             </h2>
           </div>
+        </section>
+
+        <section className={styles.demoPage}>
+          <div className={styles.demoHeader}>
+            <h3 className={styles.h3}>
+              Want to try it out?
+            </h3>
+            <h4 className={styles.h4}>
+              Use this demo account to test out Learn Emoji
+            </h4>
+          </div>
+
+          <div className={styles.demoAccount}>
+            <p className={styles.demoLabel}>USERNAME</p>
+            <p className={styles.demoValue}>demouser1</p>
+            <p className={styles.demoLabel}>PASSWORD</p>
+            <p className={styles.demoValue}>password123</p>
+          </div>
+
+          <Link to="/login"
+            className={styles.buttonLink}
+          >
+            <Button
+              label="Start Learning"
+              className="startDemoPage"
+            />
+          </Link>
+
         </section>
 
         <footer className={styles.footer}>

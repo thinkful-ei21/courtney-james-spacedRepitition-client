@@ -8,17 +8,6 @@
   text-transform: uppercase;
 }
 
-.actionButton:hover,
-.startButton:hover,
-.formButton:hover {
-  cursor: pointer;
-}
-
-.startButton {
-  display: block;
-  margin: 0 auto;
-}
-
 .formButton {
   background-color: #f53240;
   border: none;
@@ -29,4 +18,21 @@
   margin: 0 auto;
   margin-top: 20px;
   display: block;
+}
+
+.startLandingPage,
+.startDemoPage {
+  width: 175px;
+  height: 45px;
+  font-size: .85em;
+}
+
+.startDemoPage {
+  border-radius: 0;
+}
+
+.actionButton:hover,
+.formButton:hover {
+  cursor: pointer;
+  box-shadow: 0 0 3px 2px rgba(255, 255, 255, 0.5);
 }
