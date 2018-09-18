@@ -188,6 +188,10 @@
     height: 150px;
   }
 
+  /* .featurePage {
+    height: 80vh;
+  } */
+
   .leftCloudBackground,
   .rightCloudBackground {
     flex-direction: row;
@@ -199,9 +203,33 @@
     flex-direction: row-reverse;
   }
 
-  .feedback,
-  .algo {
+  .leftCloudBackground {
+    background: no-repeat left/55% url('../../images/leftBigCloud.svg');
+    padding: 0 5vw;
+  }
+
+  /* .feedback,
+  .algo, */
+  .h2 {
     width: 40vw;
+    max-width: 400px;
+  }
+
+  .feedback {
+    margin-right: 25vw;
+    width: 30vw;
+    max-width: 300px;
+  }
+
+  .rightCloudBackground {
+    background: no-repeat right/55% url('../../images/rightBigCloud.svg');
+    padding: 0 5vw;
+  }
+
+  .algo {
+    margin-left: 25vw;
+    width: 30vw;
+    max-width: 300px;
   }
 
   .demoHeader {
