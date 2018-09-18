@@ -1,13 +1,24 @@
+.landing,
 .allContent {
-  /* width: 40%; */
+  position: relative;
+}
+
+.landingContent {
+  height: 100vh;
   margin: 0 auto;
-  margin-top: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftCloud,
+.rightCloud {
+  display: none;
 }
 
 .logo {
   width: 50px;
-  display: block;
-  margin: 0 auto;
 }
 
 .header {
@@ -21,8 +32,23 @@
   text-decoration: none;
 }
 
+.featurePage {
+  height: 100vh;
+}
 
-footer {
+.leftCloudBackground {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.h2 {
+  color: #108776;
+  font-weight: 900;
+  font-size: 2em;
+  text-align: center;
+}
+
+.footer {
   background-color: #108776;
   height: 50px;
   position: absolute;
@@ -31,21 +57,71 @@ footer {
   width: 100%;
 }
 
-footer p {
+.footer p {
   color: #002c3a;
   text-align: center;
   font-weight: 700;
 }
 
 @media only screen and (max-width: 600px) {
-  .allContent {
+  .landingContent {
     width: 80%;
   }
+
+  .leftCloudBackground,
+  .rightCloudBackground {
+    flex-direction: column;
+  }
+
+  .mobileImgBkgrd {
+    background-color: white;
+    height: 45vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .feedback {
+    width: 60%;
+  }
+
+  .algo {
+    width: 50%;
+  }
+
+  .h2 {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 15%;
+  }
+
 }
 
 @media only screen and (min-width: 601px) {
-  .allContent {
+  .landingContent {
     width: 40%;
   }
 
+  .leftCloud,
+  .rightCloud {
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    display: initial;
+  }
+
+  .leftCloud {
+    top: 5%;
+    left: 0;
+  }
+
+  .rightCloud {
+    bottom: 5%;
+    right: 0;
+  }
+
+  .leftCloudBackground {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
