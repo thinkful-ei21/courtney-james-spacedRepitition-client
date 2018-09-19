@@ -98,6 +98,11 @@
 .demoHeader,
 .demoAccount {
   text-align: center;
+  margin-bottom: 5vh;
+}
+
+.demoAccount {
+  margin-bottom: 7vh;
 }
 
 .demoLabel {
@@ -167,17 +172,17 @@
     width: 90vw;
   }
 
-  .demoHeader,
-  .demoAccount {
-    margin-bottom: 10vh;
-  }
-
   .demoAccount {
     width: 60vw;
   }
 }
 
 @media only screen and (min-width: 601px) {
+  .landing,
+  .featurePage {
+    height: 80vh;
+  }
+
   .landingContent {
     width: 40%;
   }
@@ -187,10 +192,6 @@
     width: 300px;
     height: 150px;
   }
-
-  /* .featurePage {
-    height: 80vh;
-  } */
 
   .leftCloudBackground,
   .rightCloudBackground {
@@ -215,10 +216,14 @@
     max-width: 400px;
   }
 
-  .feedback {
-    margin-right: 25vw;
+  .feedback,
+  .algo {
     width: 30vw;
     max-width: 300px;
+  }
+
+  .feedback {
+    margin-right: 25vw;
   }
 
   .rightCloudBackground {
@@ -228,17 +233,10 @@
 
   .algo {
     margin-left: 25vw;
-    width: 30vw;
-    max-width: 300px;
   }
 
   .demoHeader {
     width: 60vw;
-  }
-
-  .demoHeader,
-  .demoAccount {
-    margin-bottom: 5vh;
   }
 
   .demoAccount {
@@ -253,4 +251,40 @@
   .demoLeftCloud {
     top: 0;
   }
+}
+
+@media only screen and (min-width: 800px) {
+  .landing,
+  .featurePage {
+    height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .feedback,
+  .algo {
+    max-width: 400px;
+  }
+
+  .feedback {
+    margin-right: 27vw;
+  }
+
+  .algo {
+    margin-left: 27vw;
+  }
+
+  .h2,
+  .h3 {
+    font-size: 2.5em;
+  }
+
+  .h4 {
+    font-size: 2em;
+  }
+
+  .demoLabel {
+    font-size: 1.25em;
+  }
+
 }
